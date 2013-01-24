@@ -765,7 +765,7 @@ if (!$students) {
 	foreach($groups as $group) {
         $members = groups_get_members($group->id, 'u.id, lastname, firstname, email, picture', 'lastname, firstname');
         if (empty($members)) continue;
-        if (!scheduler_has_slot(implode(',', array_keys($members)), $scheduler, true, $scheduler->schedulermode == 'onetime')) {
+        if (!scheduler_has_slot(implode(',', array_keys($members)), $scheduler, true, $scheduler->schedulermode == 'onetime')) { // multi support?
             $actions = '';
             $actions .= "<a href=\"view.php?what=schedulegroup&amp;id={$cm->id}&amp;groupid={$group->id}&amp;page={$page}\">";
             $actions .= get_string('schedule', 'scheduler');

@@ -38,6 +38,7 @@ class mod_scheduler_mod_form extends moodleform_mod {
 	
 	    $modeoptions['onetime'] = get_string('oneatatime', 'scheduler');
 	    $modeoptions['oneonly'] = get_string('oneappointmentonly', 'scheduler');
+	    $modeoptions['multi'] = get_string('multi', 'scheduler');
 	    $mform->addElement('select', 'schedulermode', get_string('mode', 'scheduler'), $modeoptions);
 	    $mform->addHelpButton('schedulermode', 'appointmentmode', 'scheduler');
 
